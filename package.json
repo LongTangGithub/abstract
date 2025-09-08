@@ -1,0 +1,19 @@
+{
+    "name": "abstract-clone",
+    "version": "1.0.0",
+    "description": "Frontend Practice - Abstract help page clone built with Sass",
+    "main": "dist/index.html",
+    "scripts": {
+      "dev": "sass --watch src/scss/style.scss:dist/style.css & live-server --port=3000 --entry-file=index.html --browser=firefox",
+      "build": "sass src/scss/style.scss:dist/style.css --style=compressed",
+      "sass:watch": "sass --watch src/scss/style.scss:dist/style.css",
+      "sass:build": "sass src/scss/style.scss:dist/style.css --style=compressed"
+    },
+    "keywords": ["sass", "frontend", "clone", "css"],
+    "author": "Long Tang",
+    "license": "MIT",
+    "devDependencies": {
+      "sass": "^1.69.5",
+      "live-server": "^1.2.2"
+    }
+  }
