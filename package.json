@@ -4,7 +4,7 @@
     "description": "Frontend Practice - Abstract help page clone built with Sass",
     "main": "dist/index.html",
     "scripts": {
-      "dev": "sass --watch src/scss/style.scss:dist/style.css & live-server --port=3000 --entry-file=index.html --browser=firefox",
+      "dev": "sass --watch src/scss/style.scss:dist/style.css & live-server --port=3000 --browser=chrome",
       "build": "sass src/scss/style.scss:dist/style.css --style=compressed",
       "sass:watch": "sass --watch src/scss/style.scss:dist/style.css",
       "sass:build": "sass src/scss/style.scss:dist/style.css --style=compressed"

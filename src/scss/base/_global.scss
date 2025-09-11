@@ -1,0 +1,30 @@
+@use "../abstracts/variables" as *;
+
+.container {
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 0.9375rem;
+}
+
+
+
+.btn {
+    display: inline-block;
+    padding: 6px 22px;
+    font-family: $font-primary;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-2xl;
+    line-height: 1.5;
+    margin-bottom: 0;
+    border: 1px solid $color-transparent;
+    background-image: none;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-action: manipulation;
+    touch-action: manipulation;
+    border-radius: 8px;
+}
