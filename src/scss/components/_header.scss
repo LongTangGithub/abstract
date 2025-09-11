@@ -1,0 +1,166 @@
+@use "../abstracts/variables" as *;
+@use "../base/global" as *;
+@use "../base/reset" as *;
+
+// Header mobile-first styles will go here
+.header-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    background-color: black;
+    color: $color-white;
+    font-size: 1.0625rem;
+    display: flex;
+    height: 5.5rem;
+    transition: margin-top 0.3s ease;
+
+
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding-inline: 1rem;
+        border: 1px solid green;
+
+        .nav__logo-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+    
+            .abstract-logo {
+                height: 2rem;
+                width: auto;
+                transition: opacity 150ms;
+
+                .abstract-logo:hover {
+                    opacity: 0.8;
+                }
+                
+                svg {
+                    height: 100%;
+                    width: auto;
+                    display: block;
+                }
+            }
+
+            .help-center {
+                display: inline-block;
+                margin: 4px 0 0 0.8rem;
+                color: $color-white;
+                font-family: $font-primary;
+                font-size: $font-size-2xl;
+                font-weight: $font-weight-regular;
+                text-decoration: none;
+                letter-spacing: -.5px;
+                padding: 2px 0 4px 0.8rem;
+                border-left: 2px solid $color-white;
+                transition: all 0.3s ease;
+            }
+
+            .help-center:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .nav__buttons-wrapper {
+            display: flex;
+            align-items: center;
+            order: 2;
+
+            .btn--topbar {
+                background-color: transparent;
+            }
+
+            .btn--toggle-search {
+                border-color: transparent;
+                color: $color-white;
+                padding-inline: 0;
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .btn--toggle-search:hover {
+                transform: scale(1.3);
+            }
+
+            button .fa {
+                font-size: 1.4rem;
+            }
+
+            .fa {
+                font: normal normal normal 14px/1 FontAwesome;
+                font-size: inherit;
+                text-rendering: auto;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            .tcon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 15px;
+                padding: 0;
+                height: 30px; 
+                outline: none;
+                border: none;
+                background-color: transparent;
+                color: $color-white;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+            // Target all child elements and make them block
+            .tcon > * {
+                display: block;
+            }
+
+            .tcon-menu--xcross {
+                width: auto;
+            }
+
+            .tcon-visuallyhidden {
+                position: absolute;
+                overflow: hidden;
+                
+                // make the element to zero dimensions --> invisible
+                clip: rect(0 0 0 0);
+                margin: -1px;
+                padding: 0;
+                width: 1px;
+                height: 1px;
+                border: 0;
+            }
+
+            // .tcon-menu__lines {
+            //     display: inline-block;
+            //     width: 23px; 
+            //     height: 2px;
+            //     background-color: $color-white;
+            //     transition: 0.3s;
+            //     position: relative;
+            // }
+
+        }
+        
+    }
+
+}
+
+/* xs */
+@media (min-width: 475px) {}
+/* sm */
+@media (min-width: 640px) {}
+/* md */
+@media (min-width: 768px) {
+    .container {
+        padding-inline: calc(0.9375rem * 2);
+    }
+}
+/* lg */
+@media (min-width: 1024px) {}
+/* xl */
+@media (min-width: 1280px) {}
+/* 2xl */
+@media (min-width: 1536px) {}
