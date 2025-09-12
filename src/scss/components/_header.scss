@@ -23,7 +23,7 @@
         align-items: center;
         width: 100%;
         padding-inline: 1rem;
-        border: 1px solid green;
+        
 
         .nav__logo-wrapper {
             display: flex;
@@ -144,6 +144,46 @@
 
         }
         
+        .search-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 3;
+            padding: calc(10px * 2);
+            background-color: $color-white;
+        }
+
+        .search-overlay--active {
+            display: block;
+        }
+
+        .search-overlay__container {
+            display: flex;
+            align-items: center;
+            max-width: 1900px;
+            width: 100%;
+        }
+
+        .search-overlay__input {
+            border: 1.5px solid black;
+            border-radius: 4px;
+            width: 100%;
+            padding: calc(10px * 2);
+        }
+
+        .search-overlay__close {
+            color: $color-black;
+            background-color: transparent;
+            border-color: transparent;
+            padding: .5rem 1rem;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .search-overlay__close:hover {
+            transform: scale(1.3);
+        }
     }
 
 }
