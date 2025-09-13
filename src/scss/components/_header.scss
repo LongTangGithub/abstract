@@ -15,6 +15,7 @@
     display: flex;
     height: 5.5rem;
     transition: margin-top 0.3s ease;
+    
 
 
     .nav-container {
@@ -90,10 +91,19 @@
             }
 
             .fa {
+                transition: transform 0.3s ease, opacity 0.2s ease;
                 font: normal normal normal 14px/1 FontAwesome;
                 font-size: inherit;
                 text-rendering: auto;
                 -moz-osx-font-smoothing: grayscale;
+            }
+
+            .fa-bars {
+                transform: rotate(0deg);
+            }
+        
+            .fa-times {
+                transform: rotate(90deg);
             }
 
             .tcon {
@@ -132,15 +142,6 @@
                 height: 1px;
                 border: 0;
             }
-
-            // .tcon-menu__lines {
-            //     display: inline-block;
-            //     width: 23px; 
-            //     height: 2px;
-            //     background-color: $color-white;
-            //     transition: 0.3s;
-            //     position: relative;
-            // }
 
         }
         
@@ -184,8 +185,58 @@
         .search-overlay__close:hover {
             transform: scale(1.3);
         }
-    }
 
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 88px;
+            left: 0;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            background: #191a1b;
+            color: $color-white;
+            width: 100%;
+        }
+
+        .mobile-menu--active {
+            display: block;
+        }
+
+        .mobile-menu__overlay {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 2rem 1rem;
+            flex-wrap: wrap;
+        }
+
+        .mobile-menu__link {
+            display: inline-block;
+            margin: 0 1rem;
+            padding: 1rem 0;
+            background: transparent;
+            border: none;
+            text-decoration: none;
+            color: $color-white;
+            transition: opacity 0.3s ease-in-out;
+            font-size: $font-size-2xl;
+        }
+
+        .mobile-menu__link:hover {
+            opacity: 0.5;
+        }
+        
+        .mobile-menu__divider { 
+            border-bottom: 0.5px solid white;
+            opacity: 0.7;
+            width: 60%;
+        }
+    }
+}
+
+.header-container--menu-open {
+    background-color: #191a1b;
 }
 
 /* xs */
@@ -199,7 +250,11 @@
     }
 }
 /* lg */
-@media (min-width: 1024px) {}
+@media (min-width: 1024px) {
+    .container {
+        padding-inline: calc(0.9375rem * 4);
+    }
+}
 /* xl */
 @media (min-width: 1280px) {}
 /* 2xl */

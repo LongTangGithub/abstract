@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="dist/style.css" />
     <title>Abstract</title>
   </head>
@@ -73,27 +79,53 @@
         </div>
 
         <div class="nav__buttons-wrapper">
-            <button class="btn btn--topbar btn--toggle-search" data-toggle-search="" title="Toggle search">
-                <span class="fa fa-search">
-                    
-                </span>
-            </button>
+          <button
+            class="btn btn--topbar btn--toggle-search"
+            data-toggle-search=""
+            title="Toggle search"
+          >
+            <span class="fa fa-search"> </span>
+          </button>
 
-            <button class="tcon tcon-menu--xcross" type="button" aria-label="toggle menu" data-toggle-menu="">
-                <span class="fa fa-bars"></span>
-                <span class="tcon-visuallyhidden">toggle menu</span>
-                <span class="tcon-menu__lines" aria-hidden="true"></span>
-
-            </button>
+          <button
+            class="tcon tcon-menu--xcross"
+            type="button"
+            aria-label="toggle menu"
+            data-toggle-menu=""
+          >
+            <span class="fa fa-bars"></span>
+            <span class="tcon-visuallyhidden">toggle menu</span>
+            <span class="tcon-menu__lines" aria-hidden="true"></span>
+          </button>
         </div>
 
         <div class="search-overlay">
-            <div class="search-overlay__container">
-                <input type="text" class="search-overlay__input" placeholder="Search">
-                <button class="btn search-overlay__close" aria-label="Close search">
-                    <span class="fa fa-times"></span>
-                </button>
-            </div>
+          <div class="search-overlay__container">
+            <input
+              type="text"
+              class="search-overlay__input"
+              placeholder="Search"
+            />
+            <button class="btn search-overlay__close" aria-label="Close search">
+              <span class="fa fa-times"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="mobile-menu">
+          <div class="mobile-menu__overlay">
+            <a
+              href="https://help.goabstract.com/hc/en-us/articles/360050382291-Contact-Support"
+              class="btn mobile-menu__link"
+              >Submit a request</a
+            >
+            <span class="mobile-menu__divider"></span>
+            <a
+              href="https://goabstract.zendesk.com/auth/v2/login/signin?return_to=https%3A%2F%2Fhelp.goabstract.com%2Fhc%2Fen-us%2Fsearch&theme=hc&locale=en-us&brand_id=360000024632&auth_origin=360000024632%2Ctrue%2Ctrue"
+              class="btn mobile-menu__link"
+              >Sign in</a
+            >
+          </div>
         </div>
       </div>
     </header>
