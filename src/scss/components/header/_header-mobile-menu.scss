@@ -1,0 +1,101 @@
+@use "../../abstracts/variables" as *;
+
+// Mobile menu and hamburger styles
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 88px;
+    left: 0;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    background: #191a1b;
+    color: $color-white;
+    width: 100%;
+}
+
+.mobile-menu--active {
+    display: block;
+}
+
+.mobile-menu__overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 1rem;
+    flex-wrap: wrap;
+}
+
+.mobile-menu__link {
+    display: inline-block;
+    margin: 0 1rem;
+    padding: 1rem 0;
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    color: $color-white;
+    transition: opacity 0.3s ease-in-out;
+    font-size: $font-size-2xl;
+}
+
+.mobile-menu__link:hover {
+    opacity: 0.5;
+}
+
+.mobile-menu__divider { 
+    border-bottom: 0.5px solid white;
+    opacity: 0.7;
+    width: 60%;
+}
+
+// Hamburger button styles
+.tcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    padding: 0;
+    height: 30px; 
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: $color-white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tcon > * {
+    display: block;
+}
+
+.tcon-menu--xcross {
+    width: auto;
+}
+
+.tcon-visuallyhidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    border: 0;
+}
+
+// Icon transitions
+.fa {
+    transition: transform 0.3s ease, opacity 0.2s ease;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-bars {
+    transform: rotate(0deg);
+}
+
+.fa-times {
+    transform: rotate(90deg);
+}

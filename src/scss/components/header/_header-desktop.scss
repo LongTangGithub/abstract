@@ -1,0 +1,78 @@
+@use "../../abstracts/variables" as *;
+
+// Desktop navigation styles (1199px+)
+@media (min-width: 1199px) {
+    .nav-container {
+        justify-content: space-between;
+    }
+
+    .nav__buttons-wrapper {
+        .btn--toggle-search {
+            display: none !important;
+        }
+
+        .tcon-menu--xcross {
+            display: none !important;
+        }
+    }
+
+    .mobile-menu {
+        display: none !important;
+    }
+
+    .desktop-nav {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-left: 8rem;
+    }
+
+    .desktop-nav__search-input {
+        display: inline-block;
+        width: 100%;
+        max-width: 265px;
+        padding: 6px 12px;
+        font-family: $font-primary;
+        font-weight: $font-weight-regular;
+        font-size: $font-size-2xl;
+        line-height: 1.5;
+        margin-bottom: 0;
+        border: 1px solid $color-transparent;
+        border-radius: 8px;
+    }
+
+    .desktop-nav__btn {
+        display: inline-block;
+        padding: 6px 12px;
+        min-width: 120px;
+        text-align: center;
+        margin-left: 1rem;
+        font-family: $font-primary;
+        font-weight: $font-weight-medium;
+        font-size: $font-size-2xl;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: all 0.2s ease;
+        white-space: nowrap;
+    }
+
+    .desktop-nav__btn--outline {
+        color: $color-white;
+        background: #191a1b;
+        border: 1px solid $color-white;
+    }
+
+    .desktop-nav__btn--outline:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .desktop-nav__btn--primary {
+        color: $color-white;
+        background-color: #4C5FD5;
+        border-color: #4C5FD5;
+    }
+
+    .desktop-nav__btn--primary:hover {
+        background-color: #3a47a3;
+    }
+}
