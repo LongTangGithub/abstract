@@ -1,7 +1,5 @@
-import { initSearchToggle } from './components/search-toggle.js';
-import { initHamburgerToggle } from './components/hamburger-toggle.js';
+import { initHeader } from './components/header-controller.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    initSearchToggle();
-    initHamburgerToggle();
+    initHeader();
 });
