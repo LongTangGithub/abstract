@@ -1,4 +1,5 @@
 @use "../../abstracts/variables" as *;
+@use "../../abstracts/utilities" as *;
 
 // Search overlay styles
 .search-overlay {
@@ -32,27 +33,21 @@
 }
 
 .search-overlay__close {
+    @include hover-scale;
     color: $color-black;
     background-color: transparent;
     border-color: transparent;
     padding: .5rem 1rem;
-    transition: transform 0.3s ease-in-out;
-}
-
-.search-overlay__close:hover {
-    transform: scale(1.3);
+    
 }
 
 // Search button styles
 .btn--toggle-search {
+    @include hover-scale;
     border-color: transparent;
     color: $color-white;
     padding-inline: 0;
-    transition: transform 0.3s ease-in-out;
-}
-
-.btn--toggle-search:hover {
-    transform: scale(1.3);
+    
 }
 
 // Responsive search overlay

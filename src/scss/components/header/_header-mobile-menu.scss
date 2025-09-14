@@ -1,4 +1,5 @@
 @use "../../abstracts/variables" as *;
+@use "../../abstracts/utilities" as *;
 
 // Mobile menu and hamburger styles
 .mobile-menu {
@@ -27,6 +28,7 @@
 }
 
 .mobile-menu__link {
+    @include hover-opacity;
     display: inline-block;
     margin: 0 1rem;
     padding: 1rem 0;
@@ -34,12 +36,7 @@
     border: none;
     text-decoration: none;
     color: $color-white;
-    transition: opacity 0.3s ease-in-out;
     font-size: $font-size-2xl;
-}
-
-.mobile-menu__link:hover {
-    opacity: 0.5;
 }
 
 .mobile-menu__divider { 
