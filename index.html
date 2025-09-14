@@ -90,8 +90,9 @@
           <button
             class="tcon tcon-menu--xcross"
             type="button"
-            aria-label="toggle menu"
-            data-toggle-menu=""
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
           >
             <span class="fa fa-bars"></span>
             <span class="tcon-visuallyhidden">toggle menu</span>
@@ -99,20 +100,36 @@
           </button>
         </div>
 
-        <div class="search-overlay">
+        <div
+          class="search-overlay"
+          role="dialog"
+          aria-labelledby="search-title"
+          aria-hidden="true"
+        >
           <div class="search-overlay__container">
+            <h2 id="search-title" class="sr-only">Search</h2>
             <input
               type="text"
               class="search-overlay__input"
               placeholder="Search"
+              aria-label="Search help articles"
             />
-            <button class="btn search-overlay__close" aria-label="Close search">
+            <button
+              class="btn search-overlay__close"
+              aria-label="Close search dialog"
+            >
               <span class="fa fa-times"></span>
             </button>
           </div>
         </div>
 
-        <div class="mobile-menu">
+        <div
+          class="mobile-menu"
+          id="mobile-menu"
+          role="navigation"
+          aria-label="Mobile navigation"
+          aria-hidden="true"
+        >
           <div class="mobile-menu__overlay">
             <a
               href="https://help.goabstract.com/hc/en-us/articles/360050382291-Contact-Support"
@@ -129,14 +146,26 @@
         </div>
 
         <div class="desktop-nav">
-            <div class="desktop-nav__search">
-                <input type="text" class="desktop-nav__search-input" placeholder="Search">
-            </div>
-            <div class="desktop-nav__buttons">
-                <a href="https://help.goabstract.com/hc/en-us/articles/360050382291-Contact-Support" class="desktop-nav__btn desktop-nav__btn--outline">Submit a request</a>
+          <div class="desktop-nav__search">
+            <input
+              type="text"
+              class="desktop-nav__search-input"
+              placeholder="Search"
+            />
+          </div>
+          <div class="desktop-nav__buttons">
+            <a
+              href="https://help.goabstract.com/hc/en-us/articles/360050382291-Contact-Support"
+              class="desktop-nav__btn desktop-nav__btn--outline"
+              >Submit a request</a
+            >
 
-                <a href="https://goabstract.zendesk.com/auth/v2/login/signin?return_to=https%3A%2F%2Fhelp.goabstract.com%2Fhc%2Fen-us%2Fsearch%3Fquery%3Dq%26utf8%3D%25E2%259C%2593&theme=hc&locale=en-us&brand_id=360000024632&auth_origin=360000024632%2Ctrue%2Ctrue" class="desktop-nav__btn desktop-nav__btn--primary">Sign in</a>
-            </div>
+            <a
+              href="https://goabstract.zendesk.com/auth/v2/login/signin?return_to=https%3A%2F%2Fhelp.goabstract.com%2Fhc%2Fen-us%2Fsearch%3Fquery%3Dq%26utf8%3D%25E2%259C%2593&theme=hc&locale=en-us&brand_id=360000024632&auth_origin=360000024632%2Ctrue%2Ctrue"
+              class="desktop-nav__btn desktop-nav__btn--primary"
+              >Sign in</a
+            >
+          </div>
         </div>
       </div>
     </header>
