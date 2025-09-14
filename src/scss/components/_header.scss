@@ -152,7 +152,8 @@
             right: 0;
             left: 0;
             z-index: 3;
-            padding: calc(10px * 2);
+            padding-inline: 1rem;
+            padding-block: 2rem;
             background-color: $color-white;
         }
 
@@ -239,6 +240,10 @@
     background-color: #191a1b;
 }
 
+.desktop-nav {
+    display: none;
+}
+
 /* xs */
 @media (min-width: 475px) {}
 /* sm */
@@ -248,6 +253,10 @@
     .container {
         padding-inline: calc(0.9375rem * 2);
     }
+
+    .search-overlay {
+        padding-inline: 3rem;
+    }
 }
 /* lg */
 @media (min-width: 1024px) {
@@ -255,6 +264,85 @@
         padding-inline: calc(0.9375rem * 4);
     }
 }
+
+@media (min-width: 1199px) {
+
+    .nav-container {
+        justify-content: space-between;
+    }
+
+    .nav__buttons-wrapper {
+        .btn--toggle-search {
+            display: none !important; //Override the --active state
+        }
+
+        .tcon-menu--xcross {
+            display: none !important; //Override the --active state
+        }
+    }
+
+    .mobile-menu {
+        display: none !important; //Override the --active state
+    }
+
+    .desktop-nav {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-left: 8rem;
+    }
+
+    .desktop-nav__search-input {
+        display: inline-block;
+        width: 100%;
+        max-width: 265px;
+        padding: 6px 12px;
+        font-family: $font-primary;
+        font-weight: $font-weight-regular;
+        font-size: $font-size-2xl;
+        line-height: 1.5;
+        margin-bottom: 0;
+        border: 1px solid $color-transparent;
+        border-radius: 8px;
+    }
+
+    .desktop-nav__btn {
+        display: inline-block;
+        padding: 6px 12px;
+        min-width: 120px;
+        text-align: center;
+        margin-left: 1rem;
+        font-family: $font-primary;
+        font-weight: $font-weight-medium;
+        font-size: $font-size-2xl;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: all 0.2s ease;
+        white-space: nowrap;
+    }
+
+    .desktop-nav__btn--outline {
+        color: $color-white;
+        background: #191a1b;
+        border: 1px solid $color-white;
+    }
+
+    .desktop-nav__btn--outline:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+
+    .desktop-nav__btn--primary {
+        color: $color-white;
+        background-color: #4C5FD5; // Using your primary blue
+        border-color: #4C5FD5;
+    }
+
+    .desktop-nav__btn--primary:hover {
+        background-color: #3a47a3;
+    }
+}
+
 /* xl */
 @media (min-width: 1280px) {}
 /* 2xl */
