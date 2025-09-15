@@ -1,0 +1,109 @@
+@use '../../abstracts/variables' as *;
+
+.hero-container {
+    position: relative;
+    color: $color-black;
+    overflow: hidden;
+    background-color: #dadbf1;
+}
+
+.search-header {
+    padding-top: 80px;
+    padding-bottom: 110px;
+}
+
+.inner-container {
+    margin: 0 auto;
+}
+
+.hero-search_content {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+}
+
+.search-header .hero-medium-title {
+    margin-bottom: 40px;
+}
+
+.hero-medium-title {
+    margin-top: 1rem;
+    font-weight: $font-weight-regular;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-box--hero-unit {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 720px;
+}
+
+.search-box__input {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 1rem 1rem;
+    border-radius: 8px;
+}
+
+.arrow-svg {
+    fill: #000000;
+    position: absolute;
+    right: 15px;
+    bottom: -5px;
+    width: 28px;
+    z-index: 100;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.hero-medium-title {
+    font-size: $font-size-5xl;
+    line-height: $line-height-snug;
+    letter-spacing: -0.075em;
+}
+
+@media (min-width: $breakpoint-xs) {
+    .hero-medium-title {
+        font-size: $font-size-6xl;
+        line-height: $line-height-snug;
+        letter-spacing: -0.0625em;
+    }
+}
+
+@media (min-width: $breakpoint-md) {
+    .search-box__input {
+        font-size: $font-size-lg;
+    }
+}
+
+.inner-container {
+    width: 100%;
+}
+
+@media (min-width: $breakpoint-md) {
+    .inner-container {
+        width: auto;
+    }
+}
+
+@media (min-width: $breakpoint-lg) {
+    .search-box__input {
+        font-size: $font-size-xl;
+    }
+}
+
+@media (min-width: $breakpoint-desktop) {
+    .search-box__input {
+        font-size: $font-size-2xl;
+    }
+}
+
+

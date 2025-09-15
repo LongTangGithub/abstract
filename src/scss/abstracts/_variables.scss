@@ -3,6 +3,7 @@ $breakpoint-xs: 475px;
 $breakpoint-sm: 640px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 1024px;
+$breakpoint-desktop: 1199px;
 $breakpoint-xl: 1280px;
 $breakpoint-2xl: 1536px;
 
@@ -23,6 +24,14 @@ $font-size-xl: 1.25rem;    // 20px
 $font-size-2xl: 1.5rem;    // 24px
 $font-size-3xl: 1.875rem;  // 30px
 $font-size-4xl: 2.25rem;   // 36px
+$font-size-5xl: 2.5rem;    // 40px (hero mobile)
+$font-size-6xl: 5rem;      // 80px (hero desktop)
+
+// Line heights
+$line-height-tight: 1;
+$line-height-snug: 1.25;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.625;
 
 // Colors
 $color-white: #fff;
