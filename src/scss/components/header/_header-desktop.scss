@@ -2,20 +2,14 @@
 @use "../../abstracts/utilities" as *;
 
 // Desktop navigation styles (1199px+)
-@media (min-width: 1199px) {
+@media (min-width: $breakpoint-desktop) {
     .nav-container {
         justify-content: space-between;
     }
 
-    // More specific selector path for buttons
-    .header-container .nav-container.nav__buttons-wrapper {
-        .btn--toggle-search {
-            display: none;
-        }
-
-        .tcon-menu--xcross {
-            display: none;
-        }
+    // Hide mobile navigation buttons
+    .nav__buttons-wrapper {
+        display: none;
     }
 
     .header-container .nav-container .mobile-menu {
@@ -26,7 +20,7 @@
         display: flex;
         align-items: center;
         gap: 1rem;
-        margin-left: 8rem;
+        margin-left: auto;
     }
 
     .desktop-nav__search-input {
