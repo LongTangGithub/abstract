@@ -1,0 +1,33 @@
+@use '../../abstracts/variables' as *;
+@use '../../base/reset' as *;
+
+@media (max-width: $breakpoint-xs) {
+    .inner-container__category.category {
+        width: 100%;
+        padding-left: 15px;
+    }
+    .category-list-svg-icon {
+        max-height: 92px;
+        margin-right: 20px;
+    }
+
+    
+}
+
+@media (max-width: $breakpoint-md) {
+    .inner-container__category {
+        width: 100% !important;
+    }
+
+    .category-list-item {
+        width: 100%;
+    }
+
+    .category-list-block {
+        padding: 0;
+    }
+
+    .category-list-svg-icon {
+        max-height: 100px;
+    }
+}
