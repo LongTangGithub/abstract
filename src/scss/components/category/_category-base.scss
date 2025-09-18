@@ -1,0 +1,89 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/utilities' as *;
+
+.inner-container__category {
+    max-width: 1900px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.inner-container__category.category {
+    max-width: 1600px;
+    width: 80% !important;
+}
+
+.category-list {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    padding-left: 0;
+}
+
+.category-list__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: calc(15px * -1);
+    margin-left: calc(15px * -1);
+}
+
+.category-list__item {
+    position: relative;
+    display: flex;
+    margin-bottom: 3rem;
+    padding-right: 15px;
+    width: 100%;
+
+    // Making it into two columns
+    @media (min-width: 768px) {
+        width: 50%;
+    }
+}
+
+.category-list-icon {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    margin-right: 20px;
+}
+
+.category-list-svg-icon {
+    max-height: 120px;
+    margin-right: 20px;
+}
+
+.category-list-block {
+    position: relative;
+    width: 100%;
+    color: $color-text;
+    @include transition-all;
+}
+
+.category-list-item__content {
+    position: relative;
+    z-index: 2;
+}
+
+.category-list-item__title {
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    line-height: 28px;
+    margin-bottom: 10px;
+}
+
+.category-list-item__desc {
+    font-size: $font-size-2xl;
+    line-height: 32px;
+    margin-bottom: 20px;
+}
+
+.category-list-link {
+    font-size: $font-size-xl;
+    line-height: 28px;
+    font-weight: $font-weight-regular;
+    color: $color-link;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+    background-color: transparent;
+    cursor: pointer;
+}
