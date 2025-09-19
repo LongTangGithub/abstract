@@ -1,0 +1,8 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/utilities' as *;
+
+@media (min-width: $breakpoint-xl) {
+    .footer-column {
+        width: 15%;
+    }
+}

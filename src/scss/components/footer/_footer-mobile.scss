@@ -1,0 +1,49 @@
+@use '../../base/global' as *;
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/utilities' as *;
+
+@media (max-width: $breakpoint-sm) {
+    .inner-footer {
+        padding-bottom: 180px;
+    }
+
+    .footer-column {
+        width: calc(50% - 83px);
+        margin-right: 80px;
+    }
+
+    .footer-column-copyright {
+        left: 0;
+    }
+}
+
+@media (max-width: $breakpoint-md) {
+    .containeer {
+        padding-right: calc(15px * 2);
+        padding-left: calc(15px * 2);
+    }
+
+    .inner-container__footer {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 621px) {
+    .inner__footer {
+        padding-bottom: 50px;
+    }
+
+    .footer-column:nth-child(2), .footer-column:nth-child(4) {
+        width: calc(70%);
+        margin-right: 0;
+    }
+ }
+
+@media screen and (max-width: 991px) and (min-width: 769px) {
+    .inner__footer {
+        display: flex
+;
+        flex-wrap: wrap;
+        padding-bottom: 180px;
+    }
+}
